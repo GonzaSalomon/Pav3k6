@@ -12,7 +12,7 @@ namespace PAV3k6.Clases
     {
         SqlConnection Conexion = new SqlConnection();
         SqlCommand Cmd = new SqlCommand();
-        string Cadena_conexion = "";
+        string Cadena_conexion = "Data Source=200.69.137.167,11333;Initial Catalog=BD3K6G11_2021;Persist Security Info=True;User ID=BD3K6G11_2021;Password=BDG11_9654";
 
         private void Conectar()
         {

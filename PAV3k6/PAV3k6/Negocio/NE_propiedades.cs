@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using PAV3k6;
 using PAV3k6.Clases;
-
 
 namespace PAV3k6.Negocio
 {

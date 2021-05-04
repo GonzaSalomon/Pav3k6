@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PAV3k6.Formularios;
 
 namespace PAV3k6
 {
@@ -16,7 +17,7 @@ namespace PAV3k6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Frm_AMB_Propiedades());
         }
     }
 }
