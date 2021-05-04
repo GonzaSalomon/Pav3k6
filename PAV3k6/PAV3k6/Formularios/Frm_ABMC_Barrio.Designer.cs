@@ -40,7 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bD3K6G112021DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -133,7 +133,7 @@
             // 
             this.groupBox1.Controls.Add(this.cmb_localidades);
             this.groupBox1.Controls.Add(this.cmb_provincias);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(379, 208);
@@ -144,15 +144,15 @@
             this.groupBox1.Text = "Buscar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button4
+            // btn_buscar
             // 
-            this.button4.Location = new System.Drawing.Point(13, 81);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(215, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Buscar Barrio";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_buscar.Location = new System.Drawing.Point(13, 81);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(215, 23);
+            this.btn_buscar.TabIndex = 4;
+            this.btn_buscar.Text = "Buscar Barrio";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -262,7 +262,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bD3K6G112021DataSetBindingSource;
         private BD3K6G11_2021Provincias bD3K6G11_2021Provincias;
