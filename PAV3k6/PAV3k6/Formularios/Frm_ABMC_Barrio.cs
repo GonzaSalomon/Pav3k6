@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PAV3k6;
 using PAV3k6.Negocio;
+using PAV3k6.Clases;
 
 namespace PAV3k6.Formularios
 {
@@ -26,6 +28,10 @@ namespace PAV3k6.Formularios
             NE_Barrios barrios = new NE_Barrios();
             tablafull = barrios.MostrarEnPantalla();
             CargarGrilla(tablafull);
+            string sqlProv = "SELECT " + cmb_provincias.Pp_Pk + ", " + cmb_provincias.Pp_descripcion + " FROM " + cmb_provincias.Pp_tabla_origen;
+            cmb_provincias.CargarCombo(sqlProv);
+            string sqlLoc = "SELECT " + cmb_localidades.Pp_Pk + ", " + cmb_localidades.Pp_descripcion + " FROM " + cmb_localidades.Pp_tabla_origen + " WHERE id_provincia = " + cmb_provincias.SelectedValue.ToString();
+            cmb_localidades.CargarCombo(sqlLoc);
         }
 
 
@@ -49,6 +55,16 @@ namespace PAV3k6.Formularios
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void cmb_provincias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sqlLoc = "SELECT " + cmb_localidades.Pp_Pk + ", " + cmb_localidades.Pp_descripcion + " FROM " + cmb_localidades.Pp_tabla_origen + " WHERE id_provincia = " + cmb_provincias.SelectedValue.ToString();
+            cmb_localidades.CargarCombo(sqlLoc);
         }
     }
 }

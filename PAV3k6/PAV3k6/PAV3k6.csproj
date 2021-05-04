@@ -57,6 +57,9 @@
       <DependentUpon>BD3K6G11_2021Provincias.xsd</DependentUpon>
     </Compile>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
+    <Compile Include="Clases\ComboBoxHeredada.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

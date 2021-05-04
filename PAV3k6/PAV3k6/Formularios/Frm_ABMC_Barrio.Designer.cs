@@ -40,15 +40,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.bD3K6G112021DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bD3K6G11_2021Provincias = new PAV3k6.BD3K6G11_2021Provincias();
             this.provinciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provinciasTableAdapter = new PAV3k6.BD3K6G11_2021ProvinciasTableAdapters.provinciasTableAdapter();
+            this.bD3K6G11_2021Provincias1 = new PAV3k6.BD3K6G11_2021Provincias();
+            this.cmb_provincias = new PAV3k6.Clases.ComboBoxHeredada();
+            this.cmb_localidades = new PAV3k6.Clases.ComboBoxHeredada();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barriosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_barrios)).BeginInit();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G112021DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias1)).BeginInit();
             this.SuspendLayout();
             // 
             // bD3K6G11_2021DataSet
@@ -129,11 +131,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_localidades);
+            this.groupBox1.Controls.Add(this.cmb_provincias);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(379, 208);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(239, 113);
@@ -142,30 +144,15 @@
             this.groupBox1.Text = "Buscar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox1
+            // button4
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Provincia...";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(125, 28);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(103, 21);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.Text = "Localidad...";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(60, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 2;
+            this.button4.Location = new System.Drawing.Point(13, 81);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(215, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Buscar Barrio";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -176,14 +163,12 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre";
             // 
-            // button4
+            // textBox1
             // 
-            this.button4.Location = new System.Drawing.Point(13, 81);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(215, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Buscar Barrio";
-            this.button4.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(60, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // bD3K6G112021DataSetBindingSource
             // 
@@ -203,6 +188,35 @@
             // provinciasTableAdapter
             // 
             this.provinciasTableAdapter.ClearBeforeFill = true;
+            // 
+            // bD3K6G11_2021Provincias1
+            // 
+            this.bD3K6G11_2021Provincias1.DataSetName = "BD3K6G11_2021Provincias";
+            this.bD3K6G11_2021Provincias1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmb_provincias
+            // 
+            this.cmb_provincias.FormattingEnabled = true;
+            this.cmb_provincias.Location = new System.Drawing.Point(13, 20);
+            this.cmb_provincias.Name = "cmb_provincias";
+            this.cmb_provincias.Pp_descripcion = "nombre";
+            this.cmb_provincias.Pp_Pk = "id_provincia";
+            this.cmb_provincias.Pp_tabla_origen = "provincias";
+            this.cmb_provincias.Size = new System.Drawing.Size(103, 21);
+            this.cmb_provincias.TabIndex = 5;
+            this.cmb_provincias.Text = "Provincia...";
+            this.cmb_provincias.SelectedIndexChanged += new System.EventHandler(this.cmb_provincias_SelectedIndexChanged);
+            // 
+            // cmb_localidades
+            // 
+            this.cmb_localidades.FormattingEnabled = true;
+            this.cmb_localidades.Location = new System.Drawing.Point(125, 20);
+            this.cmb_localidades.Name = "cmb_localidades";
+            this.cmb_localidades.Pp_descripcion = "nombre";
+            this.cmb_localidades.Pp_Pk = "id_localidad";
+            this.cmb_localidades.Pp_tabla_origen = "localidades";
+            this.cmb_localidades.Size = new System.Drawing.Size(103, 21);
+            this.cmb_localidades.TabIndex = 6;
             // 
             // ABMC_Barrio
             // 
@@ -230,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G112021DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,13 +262,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bD3K6G112021DataSetBindingSource;
         private BD3K6G11_2021Provincias bD3K6G11_2021Provincias;
         private System.Windows.Forms.BindingSource provinciasBindingSource;
         private BD3K6G11_2021ProvinciasTableAdapters.provinciasTableAdapter provinciasTableAdapter;
+        private BD3K6G11_2021Provincias bD3K6G11_2021Provincias1;
+        private Clases.ComboBoxHeredada cmb_localidades;
+        private Clases.ComboBoxHeredada cmb_provincias;
     }
 }
