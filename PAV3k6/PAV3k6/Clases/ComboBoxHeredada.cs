@@ -21,7 +21,6 @@ namespace PAV3k6.Clases
             this.DisplayMember = Pp_descripcion;
             this.ValueMember = Pp_Pk;
             this.DataSource = _BD.Consulta(sql);
-
         }
     }
 }
