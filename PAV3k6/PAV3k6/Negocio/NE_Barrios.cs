@@ -24,9 +24,8 @@ namespace PAV3k6.Negocio
             return _BD.Consulta(sql);
         }
 
-        public DataTable RecuperarBarrio(string nombre)
+        public DataTable BusquedaAvanzada(string sql)
         {
-            string sql = "SELECT * FROM barrios WHERE designacion_catastral =" + nombre.ToString();
             return _BD.Consulta(sql);
         }
     }
