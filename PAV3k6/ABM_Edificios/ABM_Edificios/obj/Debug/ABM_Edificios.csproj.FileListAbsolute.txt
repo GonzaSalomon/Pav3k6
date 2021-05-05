@@ -1,0 +1,13 @@
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\bin\Debug\ABM_Edificios.exe.config
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\bin\Debug\ABM_Edificios.exe
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\bin\Debug\ABM_Edificios.pdb
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.Form1.resources
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.Properties.Resources.resources
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.csproj.GenerateResource.cache
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.csproj.CoreCompileInputs.cache
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.exe
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.pdb
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.AltaEdificios.resources
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.BajaEdificios.resources
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.ModificarEdificios.resources
+C:\Users\Ema\Documents\Facu\PAV\ABM_Edificios\ABM_Edificios\ABM_Edificios\obj\Debug\ABM_Edificios.csprojAssemblyReference.cache
