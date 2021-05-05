@@ -31,7 +31,7 @@
             this.cmb_provincias_alta = new PAV3k6.Clases.ComboBoxHeredada();
             this.cmb_localidades_alta = new PAV3k6.Clases.ComboBoxHeredada();
             this.txt_nombre_barrio = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Alta_Barrio = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,15 +72,15 @@
             this.txt_nombre_barrio.TabIndex = 2;
             this.txt_nombre_barrio.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // btn_Alta_Barrio
             // 
-            this.button1.Location = new System.Drawing.Point(202, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 67);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Agregar Nuevo Barrio";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Alta_Barrio.Location = new System.Drawing.Point(202, 143);
+            this.btn_Alta_Barrio.Name = "btn_Alta_Barrio";
+            this.btn_Alta_Barrio.Size = new System.Drawing.Size(180, 67);
+            this.btn_Alta_Barrio.TabIndex = 3;
+            this.btn_Alta_Barrio.Text = "Agregar Nuevo Barrio";
+            this.btn_Alta_Barrio.UseVisualStyleBackColor = true;
+            this.btn_Alta_Barrio.Click += new System.EventHandler(this.btn_Alta_Barrio_Click);
             // 
             // label1
             // 
@@ -142,7 +142,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Alta_Barrio);
             this.Controls.Add(this.txt_nombre_barrio);
             this.Controls.Add(this.cmb_localidades_alta);
             this.Controls.Add(this.cmb_provincias_alta);
@@ -160,7 +160,7 @@
         private Clases.ComboBoxHeredada cmb_provincias_alta;
         private Clases.ComboBoxHeredada cmb_localidades_alta;
         private System.Windows.Forms.TextBox txt_nombre_barrio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Alta_Barrio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

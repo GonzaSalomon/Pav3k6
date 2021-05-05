@@ -28,5 +28,12 @@ namespace PAV3k6.Negocio
         {
             return _BD.Consulta(sql);
         }
+
+        public void AltaBarrio(string nombre, string id_localidad)
+        {
+            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+            string sql = "INSERT INTO barrios (nombre, id_localidad) VALUES ('" + nombre + "', " + id_localidad.ToString() + ")";
+            _BD.Insertar(sql);
+        }
     }
 }

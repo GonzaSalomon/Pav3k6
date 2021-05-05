@@ -142,6 +142,8 @@ namespace PAV3k6.Formularios
         {
             Frm_Alta_Barrio alta = new Frm_Alta_Barrio();
             alta.ShowDialog();
+            DataTable tablafull = GenerarGrilla();
+            CargarGrilla(tablafull);
         }
     }
     }

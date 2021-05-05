@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PAV3k6.Negocio;
 
 namespace PAV3k6.Formularios
 {
@@ -67,6 +68,11 @@ namespace PAV3k6.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_Alta_Barrio_Click(object sender, EventArgs e)
+        {
             if (cmb_provincias_alta.SelectedIndex == -1)
             {
                 MessageBox.Show("No seleccionó provincia");
@@ -78,6 +84,20 @@ namespace PAV3k6.Formularios
             else if (txt_nombre_barrio.Text == "")
             {
                 MessageBox.Show("No indicó ningún nombre para el barrio");
+            }
+            else
+            {
+                DialogResult alta = MessageBox.Show("¿Son correctos los datos? \n Provincia: " + 
+                    cmb_provincias_alta.Text + "\n Localidad: " + cmb_localidades_alta.Text +
+                    "\n Barrio: " + txt_nombre_barrio.Text, "Confirmar Alta", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (alta == DialogResult.OK)
+                {
+                    NE_Barrios barrio = new NE_Barrios();
+                    barrio.AltaBarrio(txt_nombre_barrio.Text, cmb_localidades_alta.SelectedValue.ToString());
+                    MessageBox.Show("Barrio añadido con éxito", "Operación exitosa");
+                    this.Close();
+                }
+                
             }
         }
     }
