@@ -8,7 +8,7 @@ using System.Data;
 
 namespace PAV3k6.Clases
 {
-    class BE_BaseDatos
+    class BE_Acceso_Datos
     {
         SqlConnection Conexion = new SqlConnection();
         SqlCommand Cmd = new SqlCommand();

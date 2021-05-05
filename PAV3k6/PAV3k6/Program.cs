@@ -18,6 +18,8 @@ namespace PAV3k6
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_AMB_Propiedades());
+            //Application.Run(new FRM_Alta_Propiedades());
+
         }
     }
 }

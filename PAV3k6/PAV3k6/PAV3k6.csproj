@@ -47,6 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BE_BaseDatos.cs" />
+    <Compile Include="Clases\ComboBoxHeredada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\FRM_Alta_Propiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FRM_Alta_Propiedades.Designer.cs">
+      <DependentUpon>FRM_Alta_Propiedades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_AMB_Propiedades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +65,9 @@
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FRM_Alta_Propiedades.resx">
+      <DependentUpon>FRM_Alta_Propiedades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_AMB_Propiedades.resx">
       <DependentUpon>Frm_AMB_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
