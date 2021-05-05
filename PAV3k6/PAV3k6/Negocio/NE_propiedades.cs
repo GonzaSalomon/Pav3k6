@@ -30,7 +30,7 @@ namespace PAV3k6.Negocio
 
         public DataTable RecuperarDesignacion(string designacion)
         {
-            string sql = "SELECT * FROM propiedades WHERE designacion_catastral =" + designacion.ToString();
+            string sql = "SELECT designacion_catastral, calle, numero, piso, departamento, barrios.nombre as 'barrio', tipos_propiedad.nombre as 'tipo'  FROM propiedades INNER JOIN barrios ON propiedades.id_barrio = barrios.id_barrio INNER JOIN tipos_propiedad ON propiedades.id_tipo_propiedad = tipos_propiedad.id_tipo_propiedad WHERE designacion_catastral =" + designacion.ToString();
             return _BD.Consulta(sql);
         }
 
@@ -58,6 +58,10 @@ namespace PAV3k6.Negocio
             _BD.Consulta(sqlInsertar);
         }
 
+        public void borrar (string designacion_catastral)
+        {
+            _BD.Consulta("DELETE FROM propiedades WHERE designacion_catastral = " + designacion_catastral);
+        }
 
     }
 }

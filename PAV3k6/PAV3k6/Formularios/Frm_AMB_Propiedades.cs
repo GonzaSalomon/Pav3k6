@@ -17,6 +17,8 @@ namespace PAV3k6.Formularios
         DataTable tabla = new DataTable();
         NE_Propiedades propiedad = new NE_Propiedades();
 
+        public string designacionCatastralB { get; set; }
+
         public Frm_AMB_Propiedades()
         {
             InitializeComponent();
@@ -60,6 +62,19 @@ namespace PAV3k6.Formularios
         {
             FRM_Alta_Propiedades alta = new FRM_Alta_Propiedades();
             alta.ShowDialog();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_Borrar_Propiedades borrar = new Frm_Borrar_Propiedades();
+            borrar.designacionCatastralBorrar = designacionCatastralB;
+            borrar.ShowDialog();
+
+        }
+
+        private void grid_propiedades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            designacionCatastralB = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
         }
     }
 }
