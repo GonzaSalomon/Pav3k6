@@ -147,6 +147,7 @@
             this.Controls.Add(this.cmb_localidades_alta);
             this.Controls.Add(this.cmb_provincias_alta);
             this.Name = "Frm_Alta_Barrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dar de alta un nuevo Barrio";
             this.Load += new System.EventHandler(this.Frm_Alta_Barrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -20,7 +20,7 @@ namespace PAV3k6.Negocio
 
         public DataTable MostrarEnPantalla()
         {
-            string sql = @"SELECT barrios.nombre as 'Barrio', localidades.nombre as 'Localidad', provincias.nombre as 'Provincia' FROM barrios INNER JOIN localidades ON barrios.id_localidad = localidades.id_localidad INNER JOIN provincias ON localidades.id_provincia = provincias.id_provincia";
+            string sql = @"SELECT barrios.id_barrio as 'id_barrio', barrios.nombre as 'Barrio', localidades.nombre as 'Localidad', provincias.nombre as 'Provincia' FROM barrios INNER JOIN localidades ON barrios.id_localidad = localidades.id_localidad INNER JOIN provincias ON localidades.id_provincia = provincias.id_provincia";
             return _BD.Consulta(sql);
         }
 
@@ -31,9 +31,14 @@ namespace PAV3k6.Negocio
 
         public void AltaBarrio(string nombre, string id_localidad)
         {
-            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
             string sql = "INSERT INTO barrios (nombre, id_localidad) VALUES ('" + nombre + "', " + id_localidad.ToString() + ")";
             _BD.Insertar(sql);
         }
+
+        public void ModBarrio(string id_barrio, string nombre, string id_localidad)
+        {
+            string sqlMod = "UPDATE barrios SET nombre = '" + nombre + "' , id_localidad = " + id_localidad + "WHERE id_barrio = " + id_barrio;
+            _BD.Modificar(sqlMod);
+        }
     }
-}
+}     

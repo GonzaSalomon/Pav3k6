@@ -12,9 +12,11 @@ using PAV3k6.Negocio;
 using PAV3k6.Clases;
 
 namespace PAV3k6.Formularios
-{
+{  
     public partial class ABMC_Barrio : Form
     {
+        public string id_barrio_mod { get; set; }
+
         public ABMC_Barrio()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace PAV3k6.Formularios
             cmb_localidades.SelectedIndex = -1;
             cmb_localidades.Text = "Localidad...";
             cmb_provincias.Text = "Provincia...";
-            
+            grid_barrios.ClearSelection();
 
             ///string sqlLoc = "SELECT " + cmb_localidades.Pp_Pk + ", " + cmb_localidades.Pp_descripcion + " FROM " + cmb_localidades.Pp_tabla_origen + " WHERE id_provincia = " + cmb_provincias.SelectedValue.ToString();
             ///cmb_localidades.CargarCombo(sqlLoc);
@@ -54,22 +56,8 @@ namespace PAV3k6.Formularios
                 grid_barrios.Rows[i].Cells[0].Value = tabla.Rows[i]["Barrio"].ToString();
                 grid_barrios.Rows[i].Cells[1].Value = tabla.Rows[i]["Localidad"].ToString();
                 grid_barrios.Rows[i].Cells[2].Value = tabla.Rows[i]["Provincia"].ToString();
+                grid_barrios.Rows[i].Cells[3].Value = tabla.Rows[i]["id_barrio"].ToString();
             }
-        }
-
-        private void grid_barrios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cmb_provincias_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,7 +93,7 @@ namespace PAV3k6.Formularios
 
             else
             {
-                string sql = @"SELECT barrios.nombre as 'Barrio', localidades.nombre as 'Localidad',
+                string sql = @"SELECT barrios.id_barrio as 'id_barrio', barrios.nombre as 'Barrio', localidades.nombre as 'Localidad',
 		                       provincias.nombre as 'Provincia' 
                                FROM barrios
                                INNER JOIN localidades ON barrios.id_localidad = localidades.id_localidad 
@@ -136,14 +124,43 @@ namespace PAV3k6.Formularios
             cmb_provincias.SelectedIndex = -1;
             cmb_provincias.Text = "Provincia...";
             txt_nombre.Text = "";
+            grid_barrios.ClearSelection();
+            btn_iniciar_update.Enabled = false;
+            btn_iniciar_baja.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btn_iniciar_alta_Click(object sender, EventArgs e)
         {
             Frm_Alta_Barrio alta = new Frm_Alta_Barrio();
             alta.ShowDialog();
             DataTable tablafull = GenerarGrilla();
             CargarGrilla(tablafull);
+            grid_barrios.ClearSelection();
+            btn_iniciar_update.Enabled = false;
+            btn_iniciar_baja.Enabled = false;
+
+        }
+
+        private void btn_iniciar_update_Click(object sender, EventArgs e)
+        {
+            id_barrio_mod = grid_barrios.CurrentRow.Cells["id_barrio"].Value.ToString();
+            Frm_Modificar_Barrio mod = new Frm_Modificar_Barrio(id_barrio_mod);
+            mod.ShowDialog();
+            DataTable tablafull = GenerarGrilla();
+            CargarGrilla(tablafull);
+            grid_barrios.ClearSelection();
+            btn_iniciar_update.Enabled = false;
+            btn_iniciar_baja.Enabled = false;
+
+
+        }
+
+        public void grid_barrios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_iniciar_update.Enabled = true;
+            btn_iniciar_baja.Enabled = true;
         }
     }
     }
