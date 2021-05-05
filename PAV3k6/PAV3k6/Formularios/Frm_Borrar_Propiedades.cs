@@ -13,7 +13,7 @@ namespace PAV3k6.Formularios
 {
     public partial class Frm_Borrar_Propiedades : Form
     {
-        public string designacionCatastralBorrar { get; set; }
+        public string designacionCatastral { get; set; }
 
         NE_Propiedades propiedad = new NE_Propiedades();
 
@@ -35,19 +35,17 @@ namespace PAV3k6.Formularios
 
         private void Frm_Borrar_Propiedades_Load(object sender, EventArgs e)
         {
-            MostrarDatos(propiedad.RecuperarDesignacion(designacionCatastralBorrar));
+            MostrarDatos(propiedad.RecuperarDesignacion(designacionCatastral));
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                propiedad.borrar(designacionCatastralBorrar);
+                propiedad.borrar(designacionCatastral);
                 MessageBox.Show("Se borró correctamente el usuario");
                 this.Close();
-             
             }
-
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

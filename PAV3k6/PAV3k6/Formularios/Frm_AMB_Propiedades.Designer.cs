@@ -31,6 +31,12 @@
             this.BTN_Modificacion = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grid_propiedades = new System.Windows.Forms.DataGridView();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Lbl_designacion_catastral = new System.Windows.Forms.Label();
+            this.Txt_Designacion_Catastral = new System.Windows.Forms.TextBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.designacion_catastral = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,12 +44,6 @@
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoPropiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Btn_Buscar = new System.Windows.Forms.Button();
-            this.Lbl_designacion_catastral = new System.Windows.Forms.Label();
-            this.Txt_Designacion_Catastral = new System.Windows.Forms.TextBox();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_salir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_propiedades)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.BTN_Modificacion.TabIndex = 7;
             this.BTN_Modificacion.Text = "Modificar";
             this.BTN_Modificacion.UseVisualStyleBackColor = true;
+            this.BTN_Modificacion.Click += new System.EventHandler(this.BTN_Modificacion_Click);
             // 
             // groupBox1
             // 
@@ -88,53 +89,6 @@
             this.grid_propiedades.Size = new System.Drawing.Size(868, 198);
             this.grid_propiedades.TabIndex = 3;
             this.grid_propiedades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_propiedades_CellClick);
-            // 
-            // designacion_catastral
-            // 
-            this.designacion_catastral.HeaderText = "Designacion Catastral";
-            this.designacion_catastral.Name = "designacion_catastral";
-            this.designacion_catastral.ReadOnly = true;
-            this.designacion_catastral.Width = 150;
-            // 
-            // calle
-            // 
-            this.calle.HeaderText = "Calle";
-            this.calle.Name = "calle";
-            this.calle.ReadOnly = true;
-            this.calle.Width = 200;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Numero";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 75;
-            // 
-            // piso
-            // 
-            this.piso.HeaderText = "Piso";
-            this.piso.Name = "piso";
-            this.piso.ReadOnly = true;
-            this.piso.Width = 50;
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.ReadOnly = true;
-            // 
-            // barrio
-            // 
-            this.barrio.HeaderText = "Barrio";
-            this.barrio.Name = "barrio";
-            this.barrio.ReadOnly = true;
-            this.barrio.Width = 150;
-            // 
-            // tipoPropiedad
-            // 
-            this.tipoPropiedad.HeaderText = "Tipo de Propiedad";
-            this.tipoPropiedad.Name = "tipoPropiedad";
-            this.tipoPropiedad.ReadOnly = true;
             // 
             // Btn_Buscar
             // 
@@ -194,6 +148,53 @@
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // designacion_catastral
+            // 
+            this.designacion_catastral.HeaderText = "Designacion Catastral";
+            this.designacion_catastral.Name = "designacion_catastral";
+            this.designacion_catastral.ReadOnly = true;
+            this.designacion_catastral.Width = 150;
+            // 
+            // calle
+            // 
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
+            this.calle.Width = 200;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 75;
+            // 
+            // piso
+            // 
+            this.piso.HeaderText = "Piso";
+            this.piso.Name = "piso";
+            this.piso.ReadOnly = true;
+            this.piso.Width = 50;
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            // 
+            // barrio
+            // 
+            this.barrio.HeaderText = "Barrio";
+            this.barrio.Name = "barrio";
+            this.barrio.ReadOnly = true;
+            this.barrio.Width = 150;
+            // 
+            // tipoPropiedad
+            // 
+            this.tipoPropiedad.HeaderText = "Tipo de Propiedad";
+            this.tipoPropiedad.Name = "tipoPropiedad";
+            this.tipoPropiedad.ReadOnly = true;
             // 
             // Frm_AMB_Propiedades
             // 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,7 @@ namespace PAV3k6.Formularios
         DataTable tabla = new DataTable();
         NE_Propiedades propiedad = new NE_Propiedades();
 
-        public string designacionCatastralB { get; set; }
+        public string designacionCatastral { get; set; }
 
         public Frm_AMB_Propiedades()
         {
@@ -37,7 +36,6 @@ namespace PAV3k6.Formularios
                 grid_propiedades.Rows[i].Cells[4].Value = tabla.Rows[i]["departamento"].ToString();
                 grid_propiedades.Rows[i].Cells[5].Value = tabla.Rows[i]["barrio"].ToString();
                 grid_propiedades.Rows[i].Cells[6].Value = tabla.Rows[i]["tipo"].ToString();
-
             }
         }
 
@@ -62,19 +60,36 @@ namespace PAV3k6.Formularios
         {
             FRM_Alta_Propiedades alta = new FRM_Alta_Propiedades();
             alta.ShowDialog();
+
+            tabla = propiedad.RecuperarTodos();
+            CargarGrilla(tabla);
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             Frm_Borrar_Propiedades borrar = new Frm_Borrar_Propiedades();
-            borrar.designacionCatastralBorrar = designacionCatastralB;
+            borrar.designacionCatastral = designacionCatastral;
             borrar.ShowDialog();
 
+            tabla = propiedad.RecuperarTodos();
+            CargarGrilla(tabla);
         }
 
         private void grid_propiedades_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            designacionCatastralB = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
+            designacionCatastral = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
+        }
+
+        private void BTN_Modificacion_Click(object sender, EventArgs e)
+        {
+            Frm_Modificar_Propiedades modificar = new Frm_Modificar_Propiedades();
+            modificar.designacionCatastral = designacionCatastral;
+            modificar.ShowDialog();
+
+            tabla = propiedad.RecuperarTodos();
+            CargarGrilla(tabla);
+
         }
     }
 }
