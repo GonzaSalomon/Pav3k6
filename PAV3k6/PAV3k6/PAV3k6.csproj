@@ -78,6 +78,12 @@
     <Compile Include="Formularios\Frm_Alta_Barrio.Designer.cs">
       <DependentUpon>Frm_Alta_Barrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_Borrar_Barrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Borrar_Barrio.Designer.cs">
+      <DependentUpon>Frm_Borrar_Barrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_Modificar_Barrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Alta_Barrio.resx">
       <DependentUpon>Frm_Alta_Barrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Borrar_Barrio.resx">
+      <DependentUpon>Frm_Borrar_Barrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Modificar_Barrio.resx">
       <DependentUpon>Frm_Modificar_Barrio.cs</DependentUpon>
@@ -155,6 +164,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\11vo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-cross-icon-71.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,7 @@ namespace PAV3k6.Formularios
 {  
     public partial class ABMC_Barrio : Form
     {
-        public string id_barrio_mod { get; set; }
+        public string id_barrio_elegido { get; set; }
 
         public ABMC_Barrio()
         {
@@ -145,8 +145,8 @@ namespace PAV3k6.Formularios
 
         private void btn_iniciar_update_Click(object sender, EventArgs e)
         {
-            id_barrio_mod = grid_barrios.CurrentRow.Cells["id_barrio"].Value.ToString();
-            Frm_Modificar_Barrio mod = new Frm_Modificar_Barrio(id_barrio_mod);
+            id_barrio_elegido = grid_barrios.CurrentRow.Cells["id_barrio"].Value.ToString();
+            Frm_Modificar_Barrio mod = new Frm_Modificar_Barrio(id_barrio_elegido);
             mod.ShowDialog();
             DataTable tablafull = GenerarGrilla();
             CargarGrilla(tablafull);
@@ -161,6 +161,18 @@ namespace PAV3k6.Formularios
         {
             btn_iniciar_update.Enabled = true;
             btn_iniciar_baja.Enabled = true;
+        }
+
+        private void btn_iniciar_baja_Click(object sender, EventArgs e)
+        {
+            id_barrio_elegido = grid_barrios.CurrentRow.Cells["id_barrio"].Value.ToString();
+            Frm_Borrar_Barrio baja = new Frm_Borrar_Barrio(id_barrio_elegido);
+            baja.ShowDialog();
+            DataTable tablafull = GenerarGrilla();
+            CargarGrilla(tablafull);
+            grid_barrios.ClearSelection();
+            btn_iniciar_update.Enabled = false;
+            btn_iniciar_baja.Enabled = false;
         }
     }
     }

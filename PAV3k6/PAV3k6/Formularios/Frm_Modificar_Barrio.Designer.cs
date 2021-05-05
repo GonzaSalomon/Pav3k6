@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.txt_nombre_mod = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_restablecer = new System.Windows.Forms.Button();
             this.btn_aplicar_mod = new System.Windows.Forms.Button();
             this.cmb_provincia_mod = new PAV3k6.Clases.ComboBoxHeredada();
             this.cmb_localidad_mod = new PAV3k6.Clases.ComboBoxHeredada();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_restablecer = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +48,6 @@
             this.txt_nombre_mod.Name = "txt_nombre_mod";
             this.txt_nombre_mod.Size = new System.Drawing.Size(144, 20);
             this.txt_nombre_mod.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::PAV3k6.Properties.Resources._11vo;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 197);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -84,17 +75,6 @@
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Provincia";
-            // 
-            // btn_restablecer
-            // 
-            this.btn_restablecer.BackgroundImage = global::PAV3k6.Properties.Resources.Erase2;
-            this.btn_restablecer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_restablecer.Location = new System.Drawing.Point(352, 102);
-            this.btn_restablecer.Name = "btn_restablecer";
-            this.btn_restablecer.Size = new System.Drawing.Size(30, 26);
-            this.btn_restablecer.TabIndex = 12;
-            this.btn_restablecer.UseVisualStyleBackColor = true;
-            this.btn_restablecer.Click += new System.EventHandler(this.btn_restablecer_Click);
             // 
             // btn_aplicar_mod
             // 
@@ -129,11 +109,45 @@
             this.cmb_localidad_mod.Size = new System.Drawing.Size(180, 21);
             this.cmb_localidad_mod.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::PAV3k6.Properties.Resources.refresh_green;
+            this.pictureBox2.Location = new System.Drawing.Point(73, 129);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_restablecer
+            // 
+            this.btn_restablecer.BackgroundImage = global::PAV3k6.Properties.Resources.Erase2;
+            this.btn_restablecer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_restablecer.Location = new System.Drawing.Point(352, 102);
+            this.btn_restablecer.Name = "btn_restablecer";
+            this.btn_restablecer.Size = new System.Drawing.Size(30, 26);
+            this.btn_restablecer.TabIndex = 12;
+            this.btn_restablecer.UseVisualStyleBackColor = true;
+            this.btn_restablecer.Click += new System.EventHandler(this.btn_restablecer_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::PAV3k6.Properties.Resources._11vo;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_Modificar_Barrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 223);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_aplicar_mod);
             this.Controls.Add(this.btn_restablecer);
             this.Controls.Add(this.pictureBox1);
@@ -144,8 +158,10 @@
             this.Controls.Add(this.cmb_provincia_mod);
             this.Controls.Add(this.cmb_localidad_mod);
             this.Name = "Frm_Modificar_Barrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modificar Barrio";
             this.Load += new System.EventHandler(this.Frm_Modificar_Barrio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,5 +179,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_restablecer;
         private System.Windows.Forms.Button btn_aplicar_mod;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -33,6 +33,10 @@
             this.barriosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barriosTableAdapter = new PAV3k6.BD3K6G11_2021DataSetTableAdapters.barriosTableAdapter();
             this.grid_barrios = new System.Windows.Forms.DataGridView();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_iniciar_alta = new System.Windows.Forms.Button();
             this.btn_iniciar_update = new System.Windows.Forms.Button();
             this.btn_iniciar_baja = new System.Windows.Forms.Button();
@@ -50,10 +54,6 @@
             this.provinciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provinciasTableAdapter = new PAV3k6.BD3K6G11_2021ProvinciasTableAdapters.provinciasTableAdapter();
             this.bD3K6G11_2021Provincias1 = new PAV3k6.BD3K6G11_2021Provincias();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barriosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_barrios)).BeginInit();
@@ -97,6 +97,31 @@
             this.grid_barrios.TabIndex = 0;
             this.grid_barrios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_barrios_CellClick);
             // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            // 
+            // Localidad
+            // 
+            this.Localidad.HeaderText = "Localidad";
+            this.Localidad.Name = "Localidad";
+            this.Localidad.ReadOnly = true;
+            // 
+            // Provincia
+            // 
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            this.Provincia.ReadOnly = true;
+            // 
+            // id_barrio
+            // 
+            this.id_barrio.HeaderText = "id_barrio";
+            this.id_barrio.Name = "id_barrio";
+            this.id_barrio.ReadOnly = true;
+            this.id_barrio.Visible = false;
+            // 
             // btn_iniciar_alta
             // 
             this.btn_iniciar_alta.Location = new System.Drawing.Point(379, 12);
@@ -127,6 +152,7 @@
             this.btn_iniciar_baja.TabIndex = 3;
             this.btn_iniciar_baja.Text = "Borrar Seleccionado";
             this.btn_iniciar_baja.UseVisualStyleBackColor = true;
+            this.btn_iniciar_baja.Click += new System.EventHandler(this.btn_iniciar_baja_Click);
             // 
             // groupBox1
             // 
@@ -247,31 +273,6 @@
             // 
             this.bD3K6G11_2021Provincias1.DataSetName = "BD3K6G11_2021Provincias";
             this.bD3K6G11_2021Provincias1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
-            // 
-            // Localidad
-            // 
-            this.Localidad.HeaderText = "Localidad";
-            this.Localidad.Name = "Localidad";
-            this.Localidad.ReadOnly = true;
-            // 
-            // Provincia
-            // 
-            this.Provincia.HeaderText = "Provincia";
-            this.Provincia.Name = "Provincia";
-            this.Provincia.ReadOnly = true;
-            // 
-            // id_barrio
-            // 
-            this.id_barrio.HeaderText = "id_barrio";
-            this.id_barrio.Name = "id_barrio";
-            this.id_barrio.ReadOnly = true;
-            this.id_barrio.Visible = false;
             // 
             // ABMC_Barrio
             // 

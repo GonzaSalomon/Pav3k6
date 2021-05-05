@@ -40,5 +40,11 @@ namespace PAV3k6.Negocio
             string sqlMod = "UPDATE barrios SET nombre = '" + nombre + "' , id_localidad = " + id_localidad + "WHERE id_barrio = " + id_barrio;
             _BD.Modificar(sqlMod);
         }
+
+        public void BajaBarrio(string id_barrio)
+        {
+            string sqlDel = "DELETE FROM barrios WHERE id_barrio = " + id_barrio;
+            _BD.Borrar(sqlDel);
+        }
     }
 }     
