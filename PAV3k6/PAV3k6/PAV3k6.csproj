@@ -97,7 +97,30 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD3K6G11_2021DataSet.xsc">
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G11_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G11_2021DataSet.xss">
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021Provincias.xsc">
+      <DependentUpon>BD3K6G11_2021Provincias.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021Provincias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G11_2021Provincias.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G11_2021Provincias.xss">
+      <DependentUpon>BD3K6G11_2021Provincias.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +133,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11vo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-cross-icon-71.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
