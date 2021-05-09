@@ -8,7 +8,7 @@ using System.Data;
 
 namespace PAV3k6.Clases
 {
-    class ComboBoxHeredada: ComboBox
+    class ComboBoxHeredada : ComboBox
     {
         public string Pp_Pk { get; set; }
         public string Pp_descripcion { get; set; }
