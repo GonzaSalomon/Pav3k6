@@ -15,10 +15,9 @@ namespace PAV3k6
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            ///Application.Run(new Form1());
-            Application.Run(new ABMC_Barrio());
+            Application.Run(new Frm_AMB_Propiedades());
+            //Application.Run(new FRM_Alta_Propiedades());
+            //Application.Run(new Frm_Modificar_Propiedades());
         }
     }
 }
