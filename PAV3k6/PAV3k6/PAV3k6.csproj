@@ -46,64 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD3K6G11_2021DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BD3K6G11_2021Provincias.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD3K6G11_2021Provincias.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Clases\BE_Acceso_Datos.cs" />
+    <Compile Include="Clases\BE_BaseDatos.cs" />
     <Compile Include="Clases\ComboBoxHeredada.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Formularios\FRM_Alta_Propiedades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\FRM_Alta_Propiedades.Designer.cs">
+      <DependentUpon>FRM_Alta_Propiedades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_ABMC_Barrio.cs">
+    <Compile Include="Formularios\Frm_AMB_Propiedades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_ABMC_Barrio.Designer.cs">
-      <DependentUpon>Frm_ABMC_Barrio.cs</DependentUpon>
+    <Compile Include="Formularios\Frm_AMB_Propiedades.Designer.cs">
+      <DependentUpon>Frm_AMB_Propiedades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_Alta_Barrio.cs">
+    <Compile Include="Formularios\Frm_Borrar_Propiedades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_Alta_Barrio.Designer.cs">
-      <DependentUpon>Frm_Alta_Barrio.cs</DependentUpon>
+    <Compile Include="Formularios\Frm_Borrar_Propiedades.Designer.cs">
+      <DependentUpon>Frm_Borrar_Propiedades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_Borrar_Barrio.cs">
+    <Compile Include="Formularios\Frm_Modificar_Propiedades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_Borrar_Barrio.Designer.cs">
-      <DependentUpon>Frm_Borrar_Barrio.cs</DependentUpon>
+    <Compile Include="Formularios\Frm_Modificar_Propiedades.Designer.cs">
+      <DependentUpon>Frm_Modificar_Propiedades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_Modificar_Barrio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Frm_Modificar_Barrio.Designer.cs">
-      <DependentUpon>Frm_Modificar_Barrio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Negocio\NE_Barrios.cs" />
+    <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Frm_ABMC_Barrio.resx">
-      <DependentUpon>Frm_ABMC_Barrio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FRM_Alta_Propiedades.resx">
+      <DependentUpon>FRM_Alta_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_Alta_Barrio.resx">
-      <DependentUpon>Frm_Alta_Barrio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Frm_AMB_Propiedades.resx">
+      <DependentUpon>Frm_AMB_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_Borrar_Barrio.resx">
-      <DependentUpon>Frm_Borrar_Barrio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Frm_Borrar_Propiedades.resx">
+      <DependentUpon>Frm_Borrar_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_Modificar_Barrio.resx">
-      <DependentUpon>Frm_Modificar_Barrio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Frm_Modificar_Propiedades.resx">
+      <DependentUpon>Frm_Modificar_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
