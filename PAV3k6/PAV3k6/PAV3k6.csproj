@@ -96,6 +96,12 @@
     <Compile Include="Formularios\Frm_Modificar_Barrio.Designer.cs">
       <DependentUpon>Frm_Modificar_Barrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tipo_Moneda\Frm_ABM_TipoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Moneda\Frm_ABM_TipoMoneda.Designer.cs">
+      <DependentUpon>Frm_ABM_TipoMoneda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,8 +189,6 @@
   <ItemGroup>
     <None Include="Resources\blue-cross-icon-71.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Moneda\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
