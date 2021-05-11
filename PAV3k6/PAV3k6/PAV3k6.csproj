@@ -177,5 +177,9 @@
   <ItemGroup>
     <None Include="Resources\blue-cross-icon-71.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Escribanos\" />
+    <Folder Include="Formularios\Moneda\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
