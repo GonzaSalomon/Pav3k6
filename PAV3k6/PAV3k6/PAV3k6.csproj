@@ -66,6 +66,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Escribanos\Frm_ABM_Escribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Escribanos\Frm_ABM_Escribano.Designer.cs">
+      <DependentUpon>Frm_ABM_Escribano.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_ABMC_Barrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,7 +184,6 @@
     <None Include="Resources\blue-cross-icon-71.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\Escribanos\" />
     <Folder Include="Formularios\Moneda\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
