@@ -24,6 +24,7 @@ namespace PAV3k6.Formularios
 
         private void ABMC_Barrio_Load(object sender, EventArgs e)
         {
+            //Hola1
             // TODO: This line of code loads data into the 'bD3K6G11_2021Provincias.provincias' table. You can move, or remove it, as needed.
             //this.provinciasTableAdapter.Fill(this.bD3K6G11_2021Provincias.provincias);
             DataTable tablafull = GenerarGrilla();
